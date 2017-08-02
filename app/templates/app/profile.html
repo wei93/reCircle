@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <script src="/static/jquery/dist/jquery.js"></script>
+    <script type="text/javascript" src="/static/bootstrap/dist/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="/static/bootstrap/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="/static/bootstrap/dist/css/bootstrap-theme.min.css">
+</head>
+<body>
+<h1 class="text-center"> Cisco reCircle </h1>
+	<div class="col-lg-12">
+      <style>
+        .form-signin {
+          max-width: 550px;
+          padding: 15px;
+          margin: 0 auto;
+        }    
+      </style>
+
+
+      <div class="container text-center">
+      <form class="form-signin" id="login_form" method="post" action="/app/ProductDetail/">
+        {% csrf_token %}
+
+        <br>
+            <label for="pid">Product ID:</label>
+            <input type="text" name="productid" id='pid' class="form-control" placeholder="Product ID, e.g: P1" value="" required autofocus>
+        <br>
+        <br>
+        <table>
+            <tr>
+                <td width="20%">
+          <label for="w1">Recyclability Weight:</label>
+          <input type="text" name="w1" id='w1' class="form-control" placeholder="e.g: 0.5" value="" required autofocus>
+        </td>
+                <td width="10%"></td>
+           <td width ="20%">
+          <label for="w2">Reparability Weight:</label>
+          <input type="text" name="w2" id='w2' class="form-control" placeholder="e.g: 0.25" value="" required autofocus>
+        </td>
+                <td width="10%"></td>
+                <td width="20%">
+          <label for="w3">Resalebility Weight:</label>
+          <input type="text" name="w3" id='w3' class="form-control" placeholder="e.g: 0.25" value="" required autofocus>
+            </td>
+        </table>
+        <br>
+        <br>
+            <button class="btn btn-lg btn-primary btn-block" type="submit">Get reCircle Score</button>
+      </form>
+  </div>
+</div>
+    </div>
+</body>
+</html>
